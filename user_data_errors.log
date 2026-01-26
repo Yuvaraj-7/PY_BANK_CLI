@@ -3,3 +3,5 @@ This Error occur at user input @ userdetails  2026-01-26 16:59:14.879442 | Value
 This Error occur at user input @ userdetails  2026-01-26 16:59:36.544289 | ValueError | month must be in 1..12
 This Error occur at user input @ userdetails  2026-01-26 16:59:49.728527 | ValueError | Please Enter Correct input , follow (m/male , f/female , N/rathernottosay)
 This Error occur at user input @ userdetails  2026-01-26 18:58:43.019284 | ValueError | Name Must contain Only Alphabets
+This Error occur at user input @ userdetails  2026-01-26 19:44:06.203674 | ValueError | Name Must contain Only Alphabets
+This Error occur at user input @ userdetails  2026-01-26 20:13:35.818475 | ValueError | Name Must contain Only Alphabets
