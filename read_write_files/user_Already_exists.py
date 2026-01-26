@@ -1,27 +1,22 @@
 import csv
 from menus.main_menu import  *
 
+
 """
-This Function is used to  check that our user when user enter login from maimenu whether the user is already
-having account in our bank or not . we are gettin user input  for email and password ,
+This Function is used to  check that our user when user enter create account details  from maimenu (choice1) whether the user is already
+having account in our bank and again trying to create account with same details  . we are gettin user input  for email and password ,
 confirm it stroing in a variable and passing as argument for this function i called in main menu. In this file 
 i passed the arguments that stored and i reading file for key email , if email matches with entered email we print
-welcome back message else we indicate that user is not present .
+You already have account message else we proceed with writing the details in to csv user_details file .
 """
 
-def read_user_details(email,Password):
-    found = False
+def account_already_exists_ornot(email,Password):
     with open("user_details.csv","r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for i in csv_reader:
-            user_readed = i["Name"]
             email_readed = i["email"]
             Password_readed = i["Password"]
             if email == email_readed and Password == Password_readed:
-                print(f"Welcome  Back {user_readed} ! ")
-                found = True
+                print(f"Sorry , You Already Have an account , Try to log in or Use other email")
                 return True
-    if not found:
-         print("You Dont Have Account , Please Create account to proceed")
-         return False
-                
+            
