@@ -1,5 +1,6 @@
 from user_validation.user_details_validate import *
 from read_write_files.write_user_detail import write_userdetails
+from read_write_files.read_login import read_user_details
 
 """
 This function i designed for main menu , i already  designed functions for user details with constrains i imported and
@@ -33,4 +34,7 @@ def signup():
            
 
         else:
-            pass
+            email = user_email()
+            Password = user_password()
+            read_user_details(email,Password)
+
