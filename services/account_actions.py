@@ -46,7 +46,7 @@ def account_details():
                   print("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
                   print(f"     User_name                 User_mail                Acc_No.                   Acc_type                             Acc_IFSC                                                          Acc_Branch                          ")                                                                                               
                   print("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
-                  print(f" {user_mail_reader}        {user_mail_reader}           {account_number}            {account_type}                   {account_ifsc}                                           {account_branch} ")  
+                  print(f" {user_name_readed}        {user_mail_reader}           {account_number}            {account_type}                   {account_ifsc}                                           {account_branch} ")  
                                 
                   return user_name_readed,user_mail_reader, account_number , account_type , account_ifsc , account_branch
         

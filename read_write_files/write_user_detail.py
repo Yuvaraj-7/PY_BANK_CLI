@@ -25,5 +25,6 @@ def write_userdetails(Name,Age,DOB,Gender,mobile,email,Password):
             "email": email,
             "Password": Password
         })
-    print("Account Created")
+    print("Account Created Successfully")
+    
         

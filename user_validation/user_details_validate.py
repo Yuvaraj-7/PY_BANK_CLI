@@ -33,7 +33,7 @@ are true then only wee met our requirement
 """   
 
 
-def user_age():
+"""def user_age():
 
     while True:
         try:
@@ -46,7 +46,7 @@ def user_age():
             return Age
         except Exception as e:
               write_errorat_userdetails_to_log(e)
-              continue
+              continue"""
 
 
 
@@ -98,17 +98,26 @@ def user_dob():
 
             current_year = datetime.now().year
             minimum_year = current_year - 18
+           
 
             if year > minimum_year:
                 print("Your Date_of_Birth doesnot match to our Policies")
                 print("Please Re Enter Your Correct Age")
                 continue
             
-            return DOB
+            return DOB 
     
 
 
-
+def user_age(DOB):
+    split_DOB = DOB.split('-')
+    day_split, month_split ,year_split = split_DOB
+    date_check_age = int(day_split)
+    month = int(month_split)
+    year = int(year_split)
+    current_year = datetime.now().year
+    Age = current_year - year
+    return Age
 
 """ 
 i designed and coded  This Fuction as we are getting userinput from user only alphabets and convert it into lower andemoved spaces

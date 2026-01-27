@@ -14,8 +14,8 @@ def update_user_details_menu():
     print("1.Update Mobile No.\n2.Update Email address \n3.Reset password \n4.Previous Menu(Account_Details) \n5.Exit")
     try:
         choice_for_update = int(input("Enter Your Choice : "))
-        if  choice_for_update < 1 or choice_for_update > 4:
-            raise ValueError("choose Between 3 choices")
+        if  choice_for_update < 1 or choice_for_update > 5:
+            raise ValueError("choose Between  choices")
         
     except Exception as e:
         print("Error : ",e)
@@ -46,9 +46,14 @@ def update_user_details_menu():
            print("To View Your Account Details")
            account_details()
 
-        else:
+        elif choice_for_update == 5:
             print("You Exitted Current Menu")
-            break
+            print("Thank You !")
+            return
+
+        else:
+            continue
+            
            
 
             

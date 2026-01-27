@@ -18,7 +18,7 @@ def account_menu():
     try:
         choice_for_Account_actions= int(input("Enter Your Choice : "))
         if choice_for_Account_actions > 3:
-            raise ValueError("choose Between 2 choices")
+            raise ValueError("choose Between 3 choices")
         
     except Exception as e:
         print("Error : ",e)
@@ -32,5 +32,6 @@ def account_menu():
 
       else:
             print("You Exited This Menu")
-            break
+            print("Thank You")
+            return
             
