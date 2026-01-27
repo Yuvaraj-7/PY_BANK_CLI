@@ -1,5 +1,5 @@
 import csv
-from menus.main_menu import  *
+
 
 
 """
@@ -17,6 +17,5 @@ def account_already_exists_ornot(email,Password):
             email_readed = i["email"]
             Password_readed = i["Password"]
             if email == email_readed and Password == Password_readed:
-                print(f"Sorry , You Already Have an account , Try to log in or Use other email")
                 return True
             

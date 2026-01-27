@@ -1,6 +1,4 @@
 import csv
-from menus.main_menu import  *
-
 """
 This Function is used to  check that our user when user enter login from maimenu whether the user is already
 having account in our bank or not . we are gettin user input  for email and password ,
@@ -10,7 +8,6 @@ welcome back message else we indicate that user is not present .
 """
 
 def read_user_details(email,Password):
-    found = False
     with open("user_details.csv","r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for i in csv_reader:
@@ -19,9 +16,8 @@ def read_user_details(email,Password):
             Password_readed = i["Password"]
             if email == email_readed and Password == Password_readed:
                 print(f"Welcome  Back {user_readed} ! ")
-                found = True
                 return True
-    if not found:
-         print("You Dont Have Account , Please Create account to proceed")
-         return False
+            else :
+               print("You Dont Have Account , Please Create account to proceed")
+               return False
                 
