@@ -11,13 +11,10 @@ def read_user_details(email,Password):
     with open("user_details.csv","r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for i in csv_reader:
-            user_readed = i["Name"]
-            email_readed = i["email"]
-            Password_readed = i["Password"]
-            if email == email_readed and Password == Password_readed:
-                print(f"Welcome  Back {user_readed} ! ")
+           if email == i["email"] and Password == i["Password"]:
+                print(f"Welcome Back {i['Name']}!")
                 return True
-            else :
-               print("You Dont Have Account , Please Create account to proceed")
-               return False
+    
+    print("You Dont Have Account , Please Create account to proceed")
+    return False
                 
