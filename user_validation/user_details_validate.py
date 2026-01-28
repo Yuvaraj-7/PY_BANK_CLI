@@ -214,7 +214,8 @@ def user_password():
            print("Password Cannot be empty")
            continue
 
-        password_pattern = r'^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,15}$'
+        password_pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^])[A-Za-z\d@$!%*?&#^]{8,15}$'
+
 
         if not re.match(password_pattern, Password):
            print("Password Should Have Atleast 1caps , 1specialcharacter , 1number ")
